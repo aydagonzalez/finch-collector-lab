@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Seed List</h1>
+
+{% for seed in seed_list %}
+  <a href="{% url 'seeds_detail' seed.id %}">
+    <div class="card">
+        <div class="card-content">
+            <span class="card-title">{{ seed.name }}</span>
+            <p>Image Url: {{ seed.color }}</p>
+        </div>
+    </div>
+  </a>
+{% endfor %}
+
+{% endblock %}

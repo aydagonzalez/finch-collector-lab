@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Seed Details</h1>
+
+<div class="row">
+  <div class="col s6 col-offset-3">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ seed.name }}</span>
+        <img style="width: 80%" src="{{ seed.color }}" alt="">
+      </div>
+      <div class="card-action">
+        <a href="{% url 'seeds_update' seed.id %}">Edit</a>
+        <a href="{% url 'seeds_delete' seed.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
